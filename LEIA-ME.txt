@@ -1,0 +1,21 @@
+A.C.T. TERMINAL V4 — PWA
+
+Arquivos:
+- index.html: aplicativo
+- manifest.webmanifest: instalação no celular
+- sw.js: cache/offline do app shell
+- icons/: ícones do aplicativo
+
+IMPORTANTE
+Para aparecer como aplicativo instalável, a pasta precisa ser publicada em um endereço HTTPS. Abrir index.html diretamente (file://) serve para testar a ficha, mas navegadores não registram Service Worker em file://.
+
+Depois de publicar:
+1. Abra o endereço no celular.
+2. Entre em Conexão / App e configure a mesma Project URL + Publishable key.
+3. Faça login.
+4. Use “Instalar A.C.T.” ou a opção “Adicionar à Tela de Início” do navegador.
+
+Nunca coloque secret key ou service_role no frontend.
+
+
+V4.1: sincronização automática segura a cada 3 segundos quando não há alterações locais pendentes. Isso faz mudanças vindas do MCP/Supabase aparecerem automaticamente no app.
